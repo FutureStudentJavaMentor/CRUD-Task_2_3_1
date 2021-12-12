@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta http-equiv="Content-Type" contenttype="text/html" charset="UTF-8"/>
+    <title>Refresh User</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/users/update/{id}(id=${user.getId()})}" th:object="${user}">
+    <label for="Имя">Измените имя </label>
+    <input type="text" th:field="*{name}" id="Имя"/>
+    <br>
+    <br>
+    <label for="Фамилия">Измените фамилию </label>
+    <input type="text" th:field="*{lastName}" id="Фамилия"/>
+    <br>
+    <br>
+    <label for="Возраст">Измените возраст </label>
+    <input type="text" th:field="*{age}" id="Возраст"/>
+    <br>
+    <br>
+    <input type="submit" value="Обновить даннные пользователя">
+
+</form>
+</body>
+</html>
