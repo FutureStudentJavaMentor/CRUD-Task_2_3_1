@@ -50,16 +50,6 @@ public class AppInit extends AbstractAnnotationConfigDispatcherServletInitialize
         ServletContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null,true, "/*");
     }
-//    private void registerCharacterEncodingFilter(ServletContext aContext) {
-//        EnumSet<DispatcherType> dispatcherTypes = EnumSet.of(DispatcherType.REQUEST, DispatcherType.FORWARD);
-//
-//        CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
-//        characterEncodingFilter.setEncoding("UTF-8");
-//        characterEncodingFilter.setForceEncoding(true);
-//
-//        FilterRegistration.Dynamic characterEncoding = aContext.addFilter("characterEncoding", characterEncodingFilter);
-//        characterEncoding.addMappingForUrlPatterns(dispatcherTypes, true, "/*");
-//
-//    }
+
 
 }
